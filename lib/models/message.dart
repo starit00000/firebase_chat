@@ -9,8 +9,7 @@ class Message {
 
   Message({this.text, this.from, this.to, this.date, this.time});
 
-  Message.fromSnapshot(DataSnapshot snapshot) {
-    var json = snapshot.value;
+  Message.fromSnapshot(Map json) {
     text = json['text'];
     from = json['from'];
     to = json['to'];
